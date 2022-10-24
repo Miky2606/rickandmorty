@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
                   },
                   icon: const Icon(
                     Icons.search,
-                    size: 18,
+                    size: 20,
                   )),
             )),
         body: const ListCharacter());

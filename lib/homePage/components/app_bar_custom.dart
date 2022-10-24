@@ -20,10 +20,9 @@ class _AppBarCustomState extends State<AppBarCustom> {
           borderRadius: BorderRadius.vertical(bottom: Radius.circular(39))),
       actions: [if (widget.button != null) widget.button!],
       elevation: 12,
-      toolbarHeight: 60,
       backgroundColor: Colors.transparent,
       flexibleSpace: Container(
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.only(top: 20),
         width: double.infinity,
         height: double.infinity,
         decoration: const BoxDecoration(
@@ -35,21 +34,18 @@ class _AppBarCustomState extends State<AppBarCustom> {
                 Color.fromARGB(104, 14, 161, 9),
               ]),
         ),
-        child: Column(
-          children: [
-            Center(
-              child: widget.search != null
-                  ? widget.search!
-                  : Text(
-                      widget.title,
-                      style: const TextStyle(
-                        color: Colors.black,
-                        fontFamily: "Hack",
-                        fontSize: 30.0,
-                      ),
-                    ),
-            ),
-          ],
+        child: Center(
+          child: widget.search != null
+              ? widget.search!
+              : Text(
+                  widget.title,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(
+                    color: Colors.black,
+                    fontFamily: "Hack",
+                    fontSize: 30.0,
+                  ),
+                ),
         ),
       ),
     );
