@@ -39,7 +39,8 @@ export const HomeView = component$(() => {
         {characters.page > 1 && (
           <button
             onClick$={() => characters.decrementPage()}
-            class="px-2 bg-green-300 rounded font-semibold text-zinc-900"
+            class="px-2 bg-green-300 rounded font-semibold text-zinc-900 "
+            id="button"
           >
             Prev
           </button>
