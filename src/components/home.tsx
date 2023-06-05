@@ -1,4 +1,4 @@
-import { $, component$, useStore, useTask$ } from "@builder.io/qwik";
+import { $, component$, useStore, useVisibleTask$ } from "@builder.io/qwik";
 
 import { CardList } from "./card.pokemon";
 import type { CharactesStore } from "./service/home.interface";
@@ -22,7 +22,7 @@ export const HomeView = component$(() => {
     }),
   });
 
-  useTask$(async ({ track }) => {
+  useVisibleTask$(async ({ track }) => {
     track(() => characters.page);
     characters.characters = await getCharacter(characters.page);
   });
